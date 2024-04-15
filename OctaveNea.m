@@ -2,7 +2,7 @@
 %Barbara Neanake Ajiesti (22/494495/TK/54328)
 
 % Welcome Message
-output = sprintf('Halo! Selamat datang^^\nPastikan kamu sudah memiliki persamaan Medan Elekromagnetik.\n');
+output = sprintf('Halo!^^\nSelamat datang di Program Octave Simulasi Medan Elektromagnetik pada Tubuh Manusia oleh Barbara Neanake.\nPastikan kamu sudah memiliki persamaan Medan Elekromagnetik.\n');
 disp(output);
 Ex_0 = input('Silakan masukkan elemen medan listrik pada koordinat x: ');
 Ey_0 = input('Silakan masukkan elemen medan listrik pada koordinat y: ');
@@ -37,9 +37,9 @@ magnitude_organ3 = sqrt(Ex_organ3^2 + Ey_organ3^2 + Ez_organ3^2);
 
 % Create meshgrid
 [x_0, y_0, z_0] = meshgrid(0:0.25:0.4, 0:0.25:1.2, 0:0.25:1.2);
-[x_jaringan1, y_jaringan1, z_jaringan1] = meshgrid(0.6:0.25:1.2, 0:0.25:1.2, 0.8:0.25:1.2);
-[x_jaringan2, y_jaringan2, z_jaringan2] = meshgrid(0.6:0.25:0.9, 0:0.25:1.2, 0:0.25:0.8);
-[x_jaringan3, y_jaringan3, z_jaringan3] = meshgrid(0.9:0.25:1.2, 0:0.25:1.2, 0:0.25:0.8);
+[x_bagian1, y_bagian1, z_bagian1] = meshgrid(0.6:0.25:1.2, 0:0.25:1.2, 0.8:0.25:1.2);
+[x_bagian2, y_bagian2, z_bagian2] = meshgrid(0.6:0.25:0.9, 0:0.25:1.2, 0:0.25:0.8);
+[x_bagian3, y_bagian3, z_bagian3] = meshgrid(0.9:0.25:1.2, 0:0.25:1.2, 0:0.25:0.8);
 
 % Membuat grid untuk vektor medan listrik
 Ex_0_grid = Ex_0 * ones(size(x_0));
@@ -85,7 +85,7 @@ quiver3(x_bagian3, y_bagian3, z_bagian3, Ex_organ3_grid, Ey_organ3_grid, Ez_orga
 xlabel('x');
 ylabel('y');
 zlabel('z');
-title('Visualisasi 3D Medan Listrik oleh Barbara Neanake A. - Kelas ME B', 'FontSize', 25, 'FontName', 'Times New Roman');
+title('Program Visualisasi 3D Medan Listrik oleh Barbara Neanake A. - Kelas ME B', 'FontSize', 25, 'FontName', 'Times New Roman');
 axis equal;
 grid on;
 hold on;
